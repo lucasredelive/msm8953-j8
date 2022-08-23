@@ -582,9 +582,6 @@ static int __maybe_unused zinitix_resume(struct device *dev)
 
 	mutex_lock(&bt541->input_dev->mutex);
 
-	if (input_device_enabled(bt541->input_dev))
-		ret = zinitix_start(bt541);
-
 	mutex_unlock(&bt541->input_dev->mutex);
 
 	return ret;
