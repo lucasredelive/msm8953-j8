@@ -16,7 +16,7 @@
 #include <dt-bindings/gpio/gpio.h>
 
 / {
-	model = "Samsung A6-Plus LTE Rev.4";
+	model = "Samsung J8 LTE";
 	qcom,msm-id = <338 0>;
 	qcom,board-id = <8 4>;
 
@@ -123,7 +123,7 @@
 		#size-cells = <0>;
 
 		sm5708-fuelgauge@71 {
-			compatible = "sm5708-battery,a6plte";
+			compatible = "sm5708-battery,j8y18lte";
 			reg = <0x71>;
 
 			interrupt-parent = <&msmgpio>;
@@ -269,9 +269,9 @@
 &framebuffer {
 	status = "okay";
 
-	width = <1080>;
-	height = <2220>;
-	stride = <(1080 * 3)>;
+	width = <720>;
+	height = <1480>;
+	stride = <(720 * 3)>;
 };
 
 &dsi0 {
@@ -280,7 +280,7 @@
 	pinctrl-1 = <&pmx_mdss_sleep &mdss_te_default>;
 
 	panel@0 {
-		compatible = "samsung,s6e3fa7-ams604nl01-fhd";
+		compatible = "samsung,s6e8aa5x01-ams604rm01-hd", "mdss,s6e8aa5x01-ams604rm01-hd";
 		reg = <0>;
 
 		reset-gpios = <&msmgpio 50 GPIO_ACTIVE_HIGH>;
@@ -316,7 +316,7 @@
 	status = "okay";
 
 	touchscreen@48 {
-		compatible = "samsung,s6sy761";
+		compatible = "zinitix,bt532_ts_device";
 
 		reg = <0x48>;
 		interrupt-parent = <&msmgpio>;
