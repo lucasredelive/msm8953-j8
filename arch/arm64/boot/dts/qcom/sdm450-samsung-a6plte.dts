@@ -36,6 +36,15 @@
 			no-map;
 			reg = <0 0x86400000 0 0x400000>;
 		};
+		
+		memory@90001000 {
+			reg = <0x0 0x90001000 0x0 (720 * 1480 * 3)>;
+			no-map;
+		};
+		
+		mpss_mem: memory@86c00000 {
+			reg = <0x0 0x86c00000 0x0 0x6400000>;
+		}
 
 		tzapp_region@82800000 {
 			no-map;
