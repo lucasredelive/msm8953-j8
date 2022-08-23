@@ -213,14 +213,9 @@ static int s6e8aa5x01_ams604rm01_probe(struct mipi_dsi_device *dsi)
 	ctx->supplies[1].supply = "vci";
 	ret = devm_regulator_bulk_get(dev, ARRAY_SIZE(ctx->supplies),
 				      ctx->supplies);
-	if (ret < 0)
-		return dev_err_probe(dev, ret, "Failed to get regulators\n");
-
+	
 	ctx->reset_gpio = devm_gpiod_get(dev, "reset", GPIOD_OUT_HIGH);
-	if (IS_ERR(ctx->reset_gpio))
-		return dev_err_probe(dev, PTR_ERR(ctx->reset_gpio),
-				     "Failed to get reset-gpios\n");
-
+	
 	ctx->dsi = dsi;
 	mipi_dsi_set_drvdata(dsi, ctx);
 
