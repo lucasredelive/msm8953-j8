@@ -373,7 +373,7 @@ config DRM_PANEL_SEIKO_43WVF1G
 	  Say Y here if you want to enable support for the Seiko
 	  43WVF1G controller for 800x480 LCD panels
 
-config DRM_PANEL_SAMSUNG_S6E8AA5X01_AMS604RM01
+# config DRM_PANEL_SAMSUNG_S6E8AA5X01_AMS604RM01
 	tristate "Samsung S6E8AA5X01_AMS604RM01 DSI interface"
 	depends on OF
 	select DRM_MIPI_DSI
