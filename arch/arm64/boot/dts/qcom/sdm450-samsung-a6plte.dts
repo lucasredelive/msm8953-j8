@@ -128,7 +128,7 @@
 		#size-cells = <0>;
 
 		sm5708-fuelgauge@71 {
-			compatible = "sm5708-battery,j8y18lte";
+			compatible = "sm5708-battery,a6plte";
 			reg = <0x71>;
 
 			interrupt-parent = <&msmgpio>;
